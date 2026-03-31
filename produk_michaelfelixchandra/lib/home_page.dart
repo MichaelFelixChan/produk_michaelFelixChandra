@@ -16,7 +16,19 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(padding: const EdgeInsets.all(8.0), child: Card()),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                child: Row(
+                  leading: image.network(
+                    width: 50,
+                    height: 50,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Row(Text('')),
+              ),
+            ),
           ],
         ),
       ),
